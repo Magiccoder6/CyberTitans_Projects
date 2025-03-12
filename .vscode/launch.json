@@ -8,17 +8,17 @@
             "type": "java",
             "name": "Api Application (Dev)",
             "request": "launch",
-            "mainClass": "com.intellibus.api.ApiApplication",
-            "projectName": "api",
-            "envFile": "${workspaceFolder}/api/environments/.env.dev"
+            "mainClass": "com.intellibus.spring_api.SpringApiApplication",
+            "projectName": "spring-api",
+            "envFile": "${workspaceFolder}/spring-api/environments/.env.dev"
         },
         {
             "type": "java",
             "name": "Api Application (Prod)",
             "request": "launch",
-            "mainClass": "com.intellibus.api.ApiApplication",
-            "projectName": "api",
-            "envFile": "${workspaceFolder}/api/environments/.env.prod"
+            "mainClass": "com.intellibus.spring_api.SpringApiApplication",
+            "projectName": "spring-api",
+            "envFile": "${workspaceFolder}/spring-api/environments/.env.prod"
         }
     ]
 }
