@@ -36,6 +36,7 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.projectlombok/lombok
 	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.36'
 	annotationProcessor 'org.projectlombok:lombok:1.18.36'  // Annotation processor for Lombok
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'  // Annotation processor for MapStruct
     testCompileOnly 'org.projectlombok:lombok:1.18.36'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
 
@@ -43,6 +44,10 @@ dependencies {
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile) {
+    options.annotationProcessorPath = configurations.annotationProcessor
 }
 
 tasks.named('test') {
